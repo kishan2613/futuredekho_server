@@ -46,6 +46,7 @@ async def register(
 
     return {
         "access_token": token,
+        "name": user.name,
         "message": "Successful"
     }
 
@@ -77,5 +78,6 @@ async def login(
 
     return {
         "access_token": token,
-        "user_id": str(user.id)
+        "user_id": str(user.id),
+        "name": user.name
     }

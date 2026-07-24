@@ -4,6 +4,7 @@ from routes.auth import router as auth
 from routes.palm import router as analyze_palm
 from fastapi.middleware.cors import CORSMiddleware
 from routes.conversation import router as conversation_router
+from routes.compatibility import router as compatibility_router
 
 app = FastAPI(
     title="FutureDekho API",
@@ -52,4 +53,6 @@ app.include_router(
     prefix="/chat",
     tags=["Chat"]
 )
+
+app.include_router(compatibility_router)
 
