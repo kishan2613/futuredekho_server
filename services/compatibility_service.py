@@ -130,6 +130,8 @@ Return ONLY JSON.
 
     response = client.chat.completions.create(
         model="llama-3.3-70b-versatile",
+        temperature=1.1,
+        top_p=0.95,
         response_format={"type": "json_object"},
         messages=[
             {
