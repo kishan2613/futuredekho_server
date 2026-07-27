@@ -13,7 +13,7 @@ app = FastAPI(
 
 origins = [
     "https://futuredekho-client.vercel.app",
-    "http://localhost:5173/",
+    "http://localhost:5173",
 ]
 
 app.add_middleware(
