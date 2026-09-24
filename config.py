@@ -7,6 +7,7 @@ load_dotenv()
 
 DATABASE_URL = os.getenv("DATABASE_URL")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+GEMINI_API_KEY_CHAT = os.getenv("GEMINI_API_KEY_CHAT")
 JWT_SECRET = os.getenv("JWT_SECRET")
 
 cloudinary.config(

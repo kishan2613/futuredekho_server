@@ -5,6 +5,9 @@ from routes.palm import router as analyze_palm
 from fastapi.middleware.cors import CORSMiddleware
 from routes.conversation import router as conversation_router
 from routes.compatibility import router as compatibility_router
+from routes.kundli import router as kundli_router
+from routes.horoscope import router as horoscope_router
+from routes.babyname import router as baby_names_router
 
 app = FastAPI(
     title="FutureDekho API",
@@ -56,4 +59,13 @@ app.include_router(
 )
 
 app.include_router(compatibility_router)
+
+app.include_router(
+    kundli_router,
+    prefix="/api",
+    tags=["Kundli"]
+)
+
+app.include_router(horoscope_router)
+app.include_router(baby_names_router)
 
