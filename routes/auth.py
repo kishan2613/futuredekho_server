@@ -46,6 +46,7 @@ async def register(
 
     return {
         "access_token": token,
+        "user_id": str(user.id),
         "name": user.name,
         "message": "Successful"
     }
